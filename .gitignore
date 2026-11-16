@@ -23,6 +23,7 @@ backend/storage/
 # Tooling & Documents
 .agents/
 .specify/
+specs/
 *.docx
 *.pdf
 
