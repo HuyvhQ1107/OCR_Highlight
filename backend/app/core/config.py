@@ -31,9 +31,13 @@ class Settings(BaseSettings):
     APP_NAME: str = "Dấu Vết Tri Thức API"
     API_V1_PREFIX: str = "/api/v1"
 
-    GEMINI_API_KEY: str = ""
-    GEMINI_MODEL: str = "gemini-3.5-flash-lite"
-    GEMINI_EMBEDDING_MODEL: str = "gemini-embedding-001"
+    OPENROUTER_API_KEY: str = ""
+    OPENROUTER_BASE_URL: str = "https://openrouter.ai/api/v1"
+    OPENROUTER_MODEL: str = "google/gemini-3.5-flash-lite"
+    OPENROUTER_EMBEDDING_MODEL: str = "google/gemini-embedding-001"
+    OPENROUTER_TIMEOUT_SECONDS: float = 60.0
+    OPENROUTER_MAX_RETRIES: int = 2
+    OPENROUTER_RETRY_BACKOFF_SECONDS: float = 1.0
 
     JWT_SECRET_KEY: str = "dev-secret-key-change-in-production"
     JWT_ALGORITHM: str = "HS256"

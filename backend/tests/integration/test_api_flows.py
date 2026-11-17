@@ -13,7 +13,7 @@ def client(tmp_path: Path, monkeypatch: pytest.MonkeyPatch):
     storage_dir = tmp_path / "storage"
     monkeypatch.setenv("DATABASE_URL", f"sqlite:///{db_path}")
     monkeypatch.setenv("STORAGE_DIR", str(storage_dir))
-    monkeypatch.setenv("GEMINI_API_KEY", "test-fake-key")
+    monkeypatch.setenv("OPENROUTER_API_KEY", "test-fake-key")
     monkeypatch.setenv("JWT_SECRET_KEY", "test-secret-key-for-pytest-123456")
 
     from app.core.config import get_settings
